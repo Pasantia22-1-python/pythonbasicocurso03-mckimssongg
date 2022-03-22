@@ -87,3 +87,75 @@ ___
 >>> a + lista
 [1, 5, 'a', 'b', 'c', 'd', 'e', 'f', 'g']
 ```
+___
+___
+
+**Diccionarios**
+
+```python
+>>> comida = {}
+>>> comida['pizza'] = "Pizza bambino"
+>>> comida.keys()
+dict_keys(['pizza'])
+>>> comida.values()
+dict_values(['Pizza bambino'])
+>>>
+```
+___
+___
+
+**Tuplas**
+
+Son inmutables
+```python
+>>> a = (1,2,3,4)
+>>> dir(a)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+>>> a.count(3)
+1
+>>> a.index(3)
+2
+>>>
+```
+___
+___
+
+
+**Conjuntos**
+
+-Sus elementos no se pueden repetir
+
+```python
+>>> a = set([1,2,3])
+>>> b = {3,4,5}
+>>> type (a)
+<class 'set'>
+>>> type (b)
+<class 'set'>
+>>> a.add(3)
+>>> a
+{1, 2, 3}
+>>> a.add(20)
+>>> a
+{1, 2, 3, 20}
+>>> a.intersection(b)
+{3}
+>>> a.union(b)
+{1, 2, 3, 20, 4, 5}
+>>> b.difference(a)
+{4, 5}
+>>>
+```
+
+___
+___
+
+**Comprehensions**
+
+```python
+>>> students_uid = [1,2,3]
+>>> students = ["Felipe", "Giselle","Kruaka"]
+>>> students_with_uid = {uid: student for uid, student in zip(students_uid, students)}
+>>> students_with_uid
+{1: 'Felipe', 2: 'Giselle', 3: 'Kruaka'}
+```
